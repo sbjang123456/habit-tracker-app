@@ -9,3 +9,4 @@
 ## 기술 스택
 * React 18 (Class Component)
 * Yarn Berry
+* gh-pages
