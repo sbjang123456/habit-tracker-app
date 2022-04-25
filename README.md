@@ -10,3 +10,4 @@
 * React 18 (Class Component)
 * Yarn Berry
 * gh-pages
+* Netlify
