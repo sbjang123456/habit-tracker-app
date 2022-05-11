@@ -1,15 +1,18 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-
 import '@fortawesome/fontawesome-free/js/all.js';
-import SimpleHabit from './components/SimpleHabit';
+import HabitPresenter from './HabitPresenter';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+const habitPresenter = new HabitPresenter([
+  { id: 1, name: 'Reading', count: 0 },
+  { id: 2, name: 'Running', count: 0 },
+  { id: 3, name: 'Coding', count: 0 },
+]);
+ReactDOM.render(
   <React.StrictMode>
-    <SimpleHabit />
-  </React.StrictMode>
+    <App presenter={habitPresenter} />
+  </React.StrictMode>,
+  document.getElementById('root')
 );
-
