@@ -34,6 +34,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@fortawesome/fontawesome-free", "npm:6.1.1"],\
+            ["@testing-library/cypress", "virtual:3400f34c4999b7283ab93fc36f453d0499aeda90afb2f5e15644205bbe8c017e7097f70f3707936b1c1e90195c92ea99a915e75295bdd1851e3228ab712e08a5#npm:8.0.2"],\
             ["@testing-library/dom", "npm:8.13.0"],\
             ["@testing-library/jest-dom", "npm:5.16.4"],\
             ["@testing-library/react", "virtual:3400f34c4999b7283ab93fc36f453d0499aeda90afb2f5e15644205bbe8c017e7097f70f3707936b1c1e90195c92ea99a915e75295bdd1851e3228ab712e08a5#npm:13.1.1"],\
@@ -3789,6 +3790,30 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@svgr/plugin-jsx", "npm:5.5.0"],\
             ["@svgr/plugin-svgo", "npm:5.5.0"],\
             ["loader-utils", "npm:2.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@testing-library/cypress", [\
+        ["npm:8.0.2", {\
+          "packageLocation": "./.yarn/cache/@testing-library-cypress-npm-8.0.2-146130f856-41561f68d3.zip/node_modules/@testing-library/cypress/",\
+          "packageDependencies": [\
+            ["@testing-library/cypress", "npm:8.0.2"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:3400f34c4999b7283ab93fc36f453d0499aeda90afb2f5e15644205bbe8c017e7097f70f3707936b1c1e90195c92ea99a915e75295bdd1851e3228ab712e08a5#npm:8.0.2", {\
+          "packageLocation": "./.yarn/__virtual__/@testing-library-cypress-virtual-5f1bc8f080/0/cache/@testing-library-cypress-npm-8.0.2-146130f856-41561f68d3.zip/node_modules/@testing-library/cypress/",\
+          "packageDependencies": [\
+            ["@testing-library/cypress", "virtual:3400f34c4999b7283ab93fc36f453d0499aeda90afb2f5e15644205bbe8c017e7097f70f3707936b1c1e90195c92ea99a915e75295bdd1851e3228ab712e08a5#npm:8.0.2"],\
+            ["@babel/runtime", "npm:7.17.9"],\
+            ["@testing-library/dom", "npm:8.13.0"],\
+            ["@types/cypress", null],\
+            ["cypress", "npm:9.6.1"]\
+          ],\
+          "packagePeers": [\
+            "@types/cypress",\
+            "cypress"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -9411,6 +9436,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["habit-tracker-app", "workspace:."],\
             ["@fortawesome/fontawesome-free", "npm:6.1.1"],\
+            ["@testing-library/cypress", "virtual:3400f34c4999b7283ab93fc36f453d0499aeda90afb2f5e15644205bbe8c017e7097f70f3707936b1c1e90195c92ea99a915e75295bdd1851e3228ab712e08a5#npm:8.0.2"],\
             ["@testing-library/dom", "npm:8.13.0"],\
             ["@testing-library/jest-dom", "npm:5.16.4"],\
             ["@testing-library/react", "virtual:3400f34c4999b7283ab93fc36f453d0499aeda90afb2f5e15644205bbe8c017e7097f70f3707936b1c1e90195c92ea99a915e75295bdd1851e3228ab712e08a5#npm:13.1.1"],\
