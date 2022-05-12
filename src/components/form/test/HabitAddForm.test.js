@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import HabitAddForm from './HabitAddForm';
+import HabitAddForm from '../HabitAddForm';
 import renderer from 'react-test-renderer';
 
 describe('HabitAddForm', () => {
