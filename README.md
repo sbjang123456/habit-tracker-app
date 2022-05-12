@@ -13,3 +13,4 @@
 * Netlify
 * jest
 * react testing library
+* cypress
