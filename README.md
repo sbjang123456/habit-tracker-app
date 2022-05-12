@@ -11,3 +11,5 @@
 * Yarn Berry
 * gh-pages
 * Netlify
+* jest
+* react testing library
