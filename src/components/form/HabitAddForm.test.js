@@ -22,7 +22,7 @@ describe('HabitAddForm', () => {
       button = screen.getByText('Add');
     });
 
-    it('calls onAdd when button is clicked valid habit is entered', () => {
+    it('추가 버튼 클릭 시 입력받은 habit 을 onAdd 에 정상적으로 담겨서 호출되는지 체크', () => {
 
       // input 에 습관 이름 타이핑 (given)
       userEvent.type(input, 'New Habit');
@@ -35,7 +35,7 @@ describe('HabitAddForm', () => {
 
     });
 
-    it('does not call onAdd when the habit is empty', () => {
+    it('텍스트박스에 값이 입력되지 않았을 때 onAdd 호출되지 않는지 체크', () => {
       userEvent.clear(input);
       userEvent.click(button);
       expect(onAdd).toHaveBeenCalledTimes(0);

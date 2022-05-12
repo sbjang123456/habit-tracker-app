@@ -44,7 +44,7 @@ describe('Habits component', () => {
       render(HabitsComponent);
     });
 
-    it('calls onAdd when clicking the "Add" button', () => {
+    it('Add 버튼 클릭 시 onAdd 함수 정상 호출 체크', () => {
       const input = screen.getByPlaceholderText('Habit');
       const button = screen.getByText('Add');
       const newHabit = 'New Habit';
@@ -53,25 +53,25 @@ describe('Habits component', () => {
       expect(onAdd).toHaveBeenCalledWith(newHabit);
     });
 
-    it('calls onIncrement when clicking the "increase" button', () => {
+    it('+버튼 클릭 시 onIncrement 함수 정상 호출 체크', () => {
       const button = screen.getAllByTitle('increase')[0];
       userEvent.click(button);
       expect(onIncrement).toHaveBeenCalledWith(habits[0]);
     });
 
-    it('calls onDecrement when clicking the "decrease" button', () => {
+    it('-버튼 클릭 시 onDecrement 함수 정상 호출 체크', () => {
       const button = screen.getAllByTitle('decrease')[0];
       userEvent.click(button);
       expect(onDecrement).toHaveBeenCalledWith(habits[0]);
     });
 
-    it('calls onDelete  when clicking the "delete" button', () => {
+    it('휴지통 버튼 클릭 시 onDelete 함수 정상 호출 체크', () => {
       const button = screen.getAllByTitle('delete')[0];
       userEvent.click(button);
       expect(onDelete).toHaveBeenCalledWith(habits[0]);
     });
 
-    it('calls onReset when clicking the "Reset All" button', () => {
+    it('전체 초기화 버튼 클릭 시 onReset 함수 정상 호출 체크', () => {
       const button = screen.getByText('Reset All');
       userEvent.click(button);
       expect(onReset).toHaveBeenCalledTimes(1);

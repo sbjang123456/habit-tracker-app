@@ -34,19 +34,19 @@ describe('Habit Component', () => {
       render(HabitComponent);
     });
     
-    it('calls onIncrement when clicking increment button', () => {
+    it('+버튼 클릭 시 onIncrement 함수 호출 확인', () => {
       const button = screen.getByTitle('increase');
       userEvent.click(button);
       expect(onIncrement).toHaveBeenCalledWith(habit);
     });
     
-    it('calls onDecrement when clicking decrement button', () => {
+    it('-버튼 클릭 시 onDecrement 함수 호출 확인', () => {
       const button = screen.getByTitle('decrease');
       userEvent.click(button);
       expect(onDecrement).toHaveBeenCalledWith(habit);
     });
     
-    it('calls onDelete when clicking delete button', () => {
+    it('휴지통 버튼 클릭 시 onDelete 함수 호출 확인', () => {
       const button = screen.getByTitle('delete');
       userEvent.click(button);
       expect(onDelete).toHaveBeenCalledWith(habit);

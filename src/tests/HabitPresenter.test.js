@@ -13,32 +13,32 @@ describe('HabitPresenter', () => {
     update = jest.fn();
   });
 
-  it('inits with habits', () => {
+  it('초기화 시 habits 을 갖고있는지 체크', () => {
     expect(presenter.getHabits()).toEqual(habits);
   });
 
-  it('increments habit count', () => {
+  it('habit item 증가 테스트', () => {
     presenter.increment(habits[0], update);
 
     expect(presenter.getHabits()[0].count).toBe(2);
     checkUpdateIsCalled();
   });
 
-  it('decrements habit count', () => {
+  it('habit item 감소 테스트', () => {
     presenter.decrement(habits[0], update);
 
     expect(presenter.getHabits()[0].count).toBe(0);
     checkUpdateIsCalled();
   });
 
-  it('does not set the count value below 0 when decrements', () => {
+  it('0 보다 작은 숫자로 셋팅되지 않는지 체크', () => {
     presenter.decrement(habits[0], update);
     presenter.decrement(habits[0], update);
 
     expect(presenter.getHabits()[0].count).toBe(0);
   });
 
-  it('deletes habit from the list', () => {
+  it('목록에서 habit item 삭제 체크', () => {
     presenter.delete(habits[0], update);
 
     expect(presenter.getHabits().length).toBe(1);
@@ -46,7 +46,7 @@ describe('HabitPresenter', () => {
     checkUpdateIsCalled();
   });
 
-  it('adds new habit to the list', () => {
+  it('목록에 새로운 habit item 추가 테스트', () => {
     presenter.add('Eating', update);
 
     expect(presenter.getHabits()[2].name).toBe('Eating');
@@ -54,7 +54,7 @@ describe('HabitPresenter', () => {
     checkUpdateIsCalled();
   });
 
-  it('throws an error when the max habits limit is exceeded', () => {
+  it('habit의 개수가 3 이상 일 시 정상적으로 에러가 발생하는지 체크', () => {
     presenter.add('Eating', update);
     expect(() => {
       presenter.add('Eating', update);
@@ -62,14 +62,14 @@ describe('HabitPresenter', () => {
   });
 
   describe('reset', () => {
-    it('set all habit counts to 0', () => {
+    it('모든 habit item 의 count 가 0 으로 변경되었는지 체크', () => {
       presenter.reset(update);
       expect(presenter.getHabits()[0].count).toBe(0);
       expect(presenter.getHabits()[1].count).toBe(0);
       checkUpdateIsCalled();
     });
 
-    it('does not create new object when count is 0', () => {
+    it('habit item 의 count 가 0 일 때는 새로운 객체를 생성해서 교체하지 않는지 체크', () => {
       const habits = presenter.getHabits();
       presenter.reset(update);
       const updatedHabits = presenter.getHabits();
